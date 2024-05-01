@@ -5,6 +5,7 @@ import Buttons from "../components/Buttons.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import About from "../components/About.astro";
 import '@fontsource-variable/space-grotesk';
+import Experience from "../components/Experience.astro";
 ---
 
 <html lang="en">
@@ -17,13 +18,18 @@ import '@fontsource-variable/space-grotesk';
 	</head>
 	<body>
 		<Header/>
-		<main class="section py-16 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
-			<SectionContainer>
+		<main>
+			<SectionContainer class="py-44">
 				<HeaderIntro/>
+				<Buttons/>
 			</SectionContainer>
-			<Buttons/>
-			<SectionContainer>
+
+			<SectionContainer >
 				<About/>
+			</SectionContainer>
+
+			<SectionContainer class="py-44">
+				<Experience/>
 			</SectionContainer>
 		</main>
 	</body>

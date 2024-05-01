@@ -1,0 +1,27 @@
+---
+import Briefcase from "../icons/Briefcase.astro";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: 'Septiembre 2023',
+        title: 'Desarrollador de Software',
+        company: 'C5i de Aguascalientes',
+        description: 'Encabecé un proyecto en el Centro de Comando, Control, Comunicaciones, Cómputo y Calidad (C5i) de Aguascalientes, centrado en la creación de una aplicación móvil para el seguimiento de mantenimientos de PMI (Punto de Monitoreo Inteligente) y LPR (Reconocimiento Automático de Placa de Matrículas). Configuré la base de datos utilizando SQL Server, implementé el backend con el framework Laravel, incluyendo la creación de APIs, y desarrollé el frontend en Android Studio utilizando Java.',
+    }
+]
+---
+<h2 class="flex items-center text-2xl font-medium gap-x-3">
+    <Briefcase/>
+    Experiencia laboral
+</h2>
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3.5 pt-5">  
+    {
+        EXPERIENCE.map((experience) =>(
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }                
+</ol>
+
