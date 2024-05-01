@@ -6,6 +6,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import About from "../components/About.astro";
 import '@fontsource-variable/space-grotesk';
 import Experience from "../components/Experience.astro";
+import Technologies from "../components/Technologies.astro";
 ---
 
 <html lang="en">
@@ -14,7 +15,7 @@ import Experience from "../components/Experience.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Portafolio de Diego - Desarrollador de Aplicaciones Avanzadas</title>
 	</head>
 	<body>
 		<Header/>
@@ -24,13 +25,21 @@ import Experience from "../components/Experience.astro";
 				<Buttons/>
 			</SectionContainer>
 
-			<SectionContainer >
-				<About/>
-			</SectionContainer>
+			<div class="space-y-24">
+				<SectionContainer >
+					<About/>
+				</SectionContainer>
+	
+				<SectionContainer >
+					<Experience/>
+				</SectionContainer>
+				
+				<SectionContainer>
+					<Technologies/>
+				</SectionContainer>
+			</div>
 
-			<SectionContainer class="py-44">
-				<Experience/>
-			</SectionContainer>
+
 		</main>
 	</body>
 </html>
