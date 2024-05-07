@@ -1,8 +1,83 @@
 ---
 import Code from "../icons/Code.astro";
+import HTML5 from "../icons/HTML5.astro";
+import CSS3 from "../icons/CSS3.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import ReactJS from "../icons/ReactJS.astro";
+import Laravel from "../icons/Laravel.astro";
+import Sql from "../icons/Sql.astro";
+import Java from "../icons/Java.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import AndroidS from "../icons/AndroidS.astro";
+
+const TECHNOLOGIES = [
+    {
+        name: 'HTML5',
+        class: 'bg-[#9a3412] text-white',
+        icon: HTML5,
+
+    },
+    {
+        name: 'CSS3',
+        class: 'bg-[#0c4a6e] text-white',
+        icon: CSS3,
+    },
+    {
+        name: 'JavaScript',
+        class: 'bg-[#a16207] text-white',
+        icon: JavaScript,
+    },
+    {
+        name: 'React',
+        class: 'bg-[#0891b2] text-white',
+        icon: ReactJS,
+    },
+    {
+        name: 'Laravel',
+        class: 'bg-[#7f1d1d] text-white',
+        icon: Laravel,
+    },
+    {
+        name: 'SQL Server',
+        class: 'bg-[#44403c] text-white',
+        icon: Sql,
+    },
+    {
+        name: 'Java',
+        class: 'bg-[#1e40af] text-white',
+        icon: Java,
+    },
+    {
+        name: 'Tailwind',
+        class: 'bg-[#0e7490] text-white',
+        icon: Tailwind,
+    },
+    {
+        name: 'Android Studio',
+        class: 'bg-[#15803d] text-white',
+        icon: AndroidS,
+    },
+    
+
+    
+]
+
 ---
 
-<h2 class="flex items-center text-2xl font-medium gap-x-3 pb-10">
-    <Code/>
-    Tecnologías
-</h2>
+    <h2 class="flex items-center text-2xl font-medium gap-x-3 pb-10">
+        <Code/>
+        Tecnologías
+    </h2>
+    <ul class="flex flex-row mb-2 gap-x-2 ">
+        {
+            TECHNOLOGIES.map((tecnologias) =>(
+                <li>
+                    <span class={`flex items-center gap-x-2 rounded-full text-xs ${tecnologias.class} py-1 px-2`}>
+                        <tecnologias.icon class="size-4"/>
+                        {tecnologias.name}
+                    </span>
+                </li>
+            ))
+        }
+    </ul>
+

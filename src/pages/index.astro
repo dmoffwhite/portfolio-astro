@@ -7,20 +7,13 @@ import About from "../components/About.astro";
 import '@fontsource-variable/space-grotesk';
 import Experience from "../components/Experience.astro";
 import Technologies from "../components/Technologies.astro";
+import LayoutIndex from "../layouts/LayoutIndex.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portafolio de Diego - Desarrollador de Aplicaciones Avanzadas</title>
-	</head>
-	<body>
+	<LayoutIndex title="Portafolio de Diego - Desarrollador de Aplicaciones Avanzadas">
 		<Header/>
 		<main>
-			<SectionContainer class="py-44">
+			<SectionContainer class="py-60">
 				<HeaderIntro/>
 				<Buttons/>
 			</SectionContainer>
@@ -41,17 +34,6 @@ import Technologies from "../components/Technologies.astro";
 
 
 		</main>
-	</body>
-</html>
-
-
-<style is:global>
-html{
-	color: white;
-	font-family: 'Space Grotesk Variable', sans-serif;
-	background: radial-gradient(50% 70%, #34103D, #1D1D1D);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-</style>
+	</LayoutIndex>
+		
+	
