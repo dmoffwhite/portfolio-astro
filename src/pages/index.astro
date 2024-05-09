@@ -8,6 +8,7 @@ import '@fontsource-variable/space-grotesk';
 import Experience from "../components/Experience.astro";
 import Technologies from "../components/Technologies.astro";
 import LayoutIndex from "../layouts/LayoutIndex.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 	<LayoutIndex title="Portafolio de Diego - Desarrollador de Aplicaciones Avanzadas">
@@ -19,16 +20,20 @@ import LayoutIndex from "../layouts/LayoutIndex.astro";
 			</SectionContainer>
 
 			<div class="space-y-24">
-				<SectionContainer >
+				<SectionContainer id="about">
 					<About/>
 				</SectionContainer>
 	
-				<SectionContainer >
+				<SectionContainer id="experiencia">
 					<Experience/>
 				</SectionContainer>
 				
-				<SectionContainer>
+				<SectionContainer id="tecnologias">
 					<Technologies/>
+				</SectionContainer>
+
+				<SectionContainer id="proyectos">
+					<Projects/>
 				</SectionContainer>
 			</div>
 

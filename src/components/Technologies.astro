@@ -9,75 +9,114 @@ import Sql from "../icons/Sql.astro";
 import Java from "../icons/Java.astro";
 import Tailwind from "../icons/Tailwind.astro";
 import AndroidS from "../icons/AndroidS.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Git from "../icons/Git.astro";
+import Csharp from "../icons/CSharp.astro";
+import Postman from "../icons/Postman.astro";
+import AstroIcon from "../icons/AstroIcon.astro";
+import Figma from "../icons/Figma.astro";
 
 const TECHNOLOGIES = [
     {
         name: 'HTML5',
-        class: 'bg-[#9a3412] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white ',
         icon: HTML5,
 
     },
     {
         name: 'CSS3',
-        class: 'bg-[#0c4a6e] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
         icon: CSS3,
     },
     {
         name: 'JavaScript',
-        class: 'bg-[#a16207] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
         icon: JavaScript,
     },
     {
         name: 'React',
-        class: 'bg-[#0891b2] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
         icon: ReactJS,
     },
     {
+        name: 'Astro',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
+        icon: AstroIcon,
+    },
+    {
         name: 'Laravel',
-        class: 'bg-[#7f1d1d] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
         icon: Laravel,
     },
     {
         name: 'SQL Server',
-        class: 'bg-[#44403c] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
         icon: Sql,
     },
     {
         name: 'Java',
-        class: 'bg-[#1e40af] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
         icon: Java,
     },
     {
-        name: 'Tailwind',
-        class: 'bg-[#0e7490] text-white',
-        icon: Tailwind,
+        name: 'C#',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
+        icon: Csharp,
     },
     {
         name: 'Android Studio',
-        class: 'bg-[#15803d] text-white',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
         icon: AndroidS,
     },
-    
+    {
+        name: 'Bootstrap',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
+        icon: Bootstrap,
+    },
+    {
+        name: 'Tailwind',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
+        icon: Tailwind,
+    },
+    {
+        name: 'Git',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
+        icon: Git,
+    },
+
+    {
+        name: 'Postman',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white ',
+        icon: Postman
+    },
+
+    {
+        name: 'Figma',
+        class: 'bg-[linear-gradient(110deg,#000,45%,#4D4B4B,55%,#000)] bg-[length:250%_100%] text-white',
+        icon: Figma,
+    }
 
     
 ]
 
 ---
 
-    <h2 class="flex items-center text-2xl font-medium gap-x-3 pb-10">
-        <Code/>
-        Tecnologías
-    </h2>
-    <ul class="flex flex-row mb-2 gap-x-2 ">
-        {
-            TECHNOLOGIES.map((tecnologias) =>(
-                <li>
-                    <span class={`flex items-center gap-x-2 rounded-full text-xs ${tecnologias.class} py-1 px-2`}>
-                        <tecnologias.icon class="size-4"/>
-                        {tecnologias.name}
-                    </span>
-                </li>
-            ))
-        }
-    </ul>
+<h2 class="flex items-center text-2xl font-medium gap-x-3 pb-10">
+    <Code/>
+    Tecnologías
+</h2>
+<div class="flex flex-wrap gap-x-2 mb-2 ">
+    {
+        TECHNOLOGIES.map((tecnologias) => (
+            <span  class={`flex items-center rounded-full text-xs ${tecnologias.class} py-1 px-2 mb-2  rounded-full border border-slate-800 `}>
+                <div class="mr-2">
+                    <tecnologias.icon />
+                </div>
+
+                {tecnologias.name }
+            </span>
+        ))
+    }
+</div>
+
 

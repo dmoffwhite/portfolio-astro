@@ -1,0 +1,91 @@
+---
+import CodeProjects from "../icons/CodeProjects.astro";
+import Laravel from "../icons/Laravel.astro";
+import ReactJS from "../icons/ReactJS.astro";
+import GitHub from "../icons/GitHub.astro";
+import Link from "../icons/Link.astro";
+
+
+const TAGS = {
+    REACT:{
+        name: 'ReactJS',
+        class: 'bg-[#075985] text-white',
+        icon: ReactJS,
+    },
+    LARAVEL:{
+        name: 'Laravel',
+        class: 'bg-[#991b1b] text-white',
+        icon: Laravel,
+    },
+    REACTNATIVE:{
+        name: 'React Native',
+        class: 'bg-[#075985] text-white',
+        icon: ReactJS,
+    },
+}
+
+const PROJECTS = [
+    {
+        title: "Clon de Nike - Ecommerce",
+        description: 
+        "Una réplica de la tienda en línea de Nike, desarrollada para el proyecto final de la asignatura Topicos Web, desarrollada desde cero con tecnologías de vanguardia como ReactJS para el frontend y Laravel para el backend.",
+        link: '',
+        github: "https://github.com/dmoffwhite/Nike",
+        image: "./projects/408shots_so.png",
+        tags: [TAGS.REACT, TAGS.LARAVEL],
+    },
+    {
+        title: "TinderITA - App de Citas",
+        description: 
+        "Una app para citas para las personas, desarrollada para el proyecto final de la asignatura Aplicaciones Moviles Multiplataforma, desarrollada desde cero con tecnologías de vanguardia como React Native para el frontend y Laravel para el backend. ",
+        link: '',
+        github: "https://github.com/dmoffwhite/DateApp",
+        image: "./projects/750shots_so.png",
+        tags: [TAGS.REACTNATIVE, TAGS.LARAVEL],
+    }
+    
+
+]
+
+---
+<h2 class="flex items-center text-2xl font-medium gap-x-3 pb-10">
+    <CodeProjects/>
+    Proyectos
+</h2>
+
+<div class="flex gap-x-5  gap-y-16">
+
+    {
+        PROJECTS.map( ({image, title,  description, tags, link, github}) => (
+        <article class="mb-12 flex flex-col bg-contact border border-white/20 w-[300px] sm:w-[400px] rounded-lg hover:scale-105 transition-all duration-300 ease-in-out">
+             <img class="w-[266px] sm:w-[320px] rounded-lg m-4 opacity-90" src={image} alt="">
+             <h3 class=" text-xl font-bold text-white mx-4 mb-4"> {title} </h3>
+             <div class="mb-4">
+                <ul class="flex flex-row mb-4 gap-x-2  mx-4">
+                    {tags.map((tag) => (
+                        <li>
+                            <span class={`flex items-center gap-x-2 rounded-full text-xs bg-black text-white py-1 px-2 ${tag.class}` }>
+                                <tag.icon/>
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                <p class="text-base mx-4">{description}</p>
+             </div>
+             <div class="flex items-center justify-between mt-auto mx-4 mb-4">
+                {github && (
+                <a class="hover:opacity-75" href={github}>
+                    <GitHub  />
+                </a>
+                )}
+                {link && (
+                    <a href={link}>
+                        <Link />
+                    </a>
+                )}
+             </div>
+        </article>
+        ))
+    } 
+</div>
