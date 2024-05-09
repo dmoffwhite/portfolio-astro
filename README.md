@@ -1,3 +1,6 @@
+![442shots_so](https://github.com/dmoffwhite/portfolio-astro/assets/68936381/a9bafb15-037a-4da8-87e0-4e59426352af)
+
+
 # Astro Starter Kit: Minimal
 
 ```sh
